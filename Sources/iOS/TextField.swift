@@ -565,13 +565,11 @@ open class TextField: UITextField {
 	private func preparePlaceholderLabel() {
         placeholderLabel = UILabel()
 		placeholderNormalColor = Color.darkText.others
-        font = RobotoFont.regular(with: 16)
         addSubview(placeholderLabel)
 	}
 	
 	/// Prepares the detailLabel.
 	private func prepareDetailLabel() {
-        detailLabel.font = RobotoFont.regular(with: 12)
         detailLabel.numberOfLines = 0
 		detailColor = Color.darkText.others
 		addSubview(detailLabel)
