@@ -252,7 +252,7 @@ open class Button: UIButton {
      when subclassing.
      */
 	open func prepare() {
-        contentScaleFactor = Device.scale
+        contentScaleFactor = UIScreen.main.scale
         contentEdgeInsetsPreset = .none
 		prepareVisualLayer()
 	}

@@ -85,7 +85,7 @@ open class View: UIView {
 	/**
      A floating point value that defines a ratio between the pixel
      dimensions of the visualLayer's contents property and the size
-     of the view. By default, this value is set to the Device.scale.
+     of the view. By default, this value is set to the UIScreen.main.scale.
      */
 	@IBInspectable
     open var contentsScale: CGFloat {
@@ -174,7 +174,7 @@ open class View: UIView {
      when subclassing.
      */
 	open func prepare() {
-		contentScaleFactor = Device.scale
+		contentScaleFactor = UIScreen.main.scale
 		backgroundColor = Color.white
 		prepareVisualLayer()
 	}

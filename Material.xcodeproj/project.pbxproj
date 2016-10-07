@@ -52,7 +52,6 @@
 		96F1DC881D654FDF0025F925 /* Material+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1DC871D654FDF0025F925 /* Material+CALayer.swift */; };
 		D011EA611DA84B43001DF3E5 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011EA5F1DA84B43001DF3E5 /* Button.swift */; };
 		D011EA621DA84B43001DF3E5 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011EA601DA84B43001DF3E5 /* IconButton.swift */; };
-		D011EA641DA84B73001DF3E5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011EA631DA84B73001DF3E5 /* Device.swift */; };
 		D011EA661DA84C57001DF3E5 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D011EA651DA84C57001DF3E5 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +102,6 @@
 		96F1DC871D654FDF0025F925 /* Material+CALayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Material+CALayer.swift"; sourceTree = "<group>"; };
 		D011EA5F1DA84B43001DF3E5 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		D011EA601DA84B43001DF3E5 /* IconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
-		D011EA631DA84B73001DF3E5 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D011EA651DA84C57001DF3E5 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,7 +189,6 @@
 				96BCB8091CB4107700C806FE /* Animation */,
 				96BCB8031CB40F4B00C806FE /* Button */,
 				96BCB8001CB40F0300C806FE /* Color */,
-				96BCB80B1CB410CC00C806FE /* Device */,
 				96230AB61D6A51FD00AF47DC /* Divider */,
 				96BCB80A1CB410A100C806FE /* Extension */,
 				96BCB8081CB4105E00C806FE /* Icon */,
@@ -260,14 +257,6 @@
 				96BCB7651CB40DC500C806FE /* Material+UIFont.swift */,
 			);
 			name = Extension;
-			sourceTree = "<group>";
-		};
-		96BCB80B1CB410CC00C806FE /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				D011EA631DA84B73001DF3E5 /* Device.swift */,
-			);
-			name = Device;
 			sourceTree = "<group>";
 		};
 		96BCB80C1CB410DD00C806FE /* View */ = {
@@ -514,7 +503,6 @@
 				96BCB7D51CB40DC500C806FE /* View.swift in Sources */,
 				D011EA611DA84B43001DF3E5 /* Button.swift in Sources */,
 				96BCB7B81CB40DC500C806FE /* Border.swift in Sources */,
-				D011EA641DA84B73001DF3E5 /* Device.swift in Sources */,
 				96F1DC881D654FDF0025F925 /* Material+CALayer.swift in Sources */,
 				96BCB7B61CB40DC500C806FE /* Animation.swift in Sources */,
 				96BCB7CB1CB40DC500C806FE /* PulseAnimation.swift in Sources */,
