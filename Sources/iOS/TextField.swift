@@ -301,6 +301,7 @@ open class TextField: UITextField {
      immediately when launching an instance, the TextField is not
      calculated correctly.
      */
+    @discardableResult
     open override func becomeFirstResponder() -> Bool {
         layoutIfNeeded()
         return super.becomeFirstResponder()
