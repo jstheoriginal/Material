@@ -378,12 +378,12 @@ open class TextField: UITextField {
 	/// Handles the clearIconButton TouchUpInside event.
 	@objc
     open func handleClearIconButton() {
-        guard true == delegate?.textFieldShouldClear?(self) else {
+        if false == delegate?.textFieldShouldClear?(self) {
             return
         }
-		
+        
         text = nil
-	}
+    }
 	
 	/// Handles the visibilityIconButton TouchUpInside event.
     @objc
