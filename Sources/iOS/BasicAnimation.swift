@@ -82,9 +82,9 @@ extension Animation {
 	public static func rotate(angle: CGFloat? = nil, rotation: CGFloat? = nil, duration: CFTimeInterval? = nil) -> CABasicAnimation {
 		let animation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
 		if let v: CGFloat = angle {
-			animation.toValue = (CGFloat(M_PI) * v / 180) as NSNumber
+			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(M_PI * 2) * v) as NSNumber
+			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -101,9 +101,9 @@ extension Animation {
 	public static func rotateX(angle: CGFloat? = nil, rotation: CGFloat? = nil, duration: CFTimeInterval? = nil) -> CABasicAnimation {
 		let animation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
 		if let v: CGFloat = angle {
-			animation.toValue = (CGFloat(M_PI) * v / 180) as NSNumber
+			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(M_PI * 2) * v) as NSNumber
+			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -120,9 +120,9 @@ extension Animation {
 	public static func rotateY(angle: CGFloat? = nil, rotation: CGFloat? = nil, duration: CFTimeInterval? = nil) -> CABasicAnimation {
 		let animation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
 		if let v: CGFloat = angle {
-			animation.toValue = (CGFloat(M_PI) * v / 180) as NSNumber
+			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(M_PI * 2) * v) as NSNumber
+			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -139,9 +139,9 @@ extension Animation {
 	public static func rotateZ(angle: CGFloat? = nil, rotation: CGFloat? = nil, duration: CFTimeInterval? = nil) -> CABasicAnimation {
 		let animation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
 		if let v: CGFloat = angle {
-			animation.toValue = (CGFloat(M_PI) * v / 180) as NSNumber
+			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(M_PI * 2) * v) as NSNumber
+			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
