@@ -84,7 +84,7 @@ extension Animation {
 		if let v: CGFloat = angle {
 			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
+			animation.toValue = (.pi * 2 * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -103,7 +103,7 @@ extension Animation {
 		if let v: CGFloat = angle {
 			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
+			animation.toValue = (.pi * 2 * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -122,7 +122,7 @@ extension Animation {
 		if let v: CGFloat = angle {
 			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
+			animation.toValue = (.pi * 2 * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
@@ -141,7 +141,7 @@ extension Animation {
 		if let v: CGFloat = angle {
 			animation.toValue = (.pi * v / 180) as NSNumber
 		} else if let v: CGFloat = rotation {
-			animation.toValue = (CGFloat(Double.pi * 2) * v) as NSNumber
+			animation.toValue = (.pi * 2 * v) as NSNumber
 		}
 		animation.fillMode = AnimationFillModeToValue(mode: .forwards)
 		animation.isRemovedOnCompletion = false
