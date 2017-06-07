@@ -123,7 +123,7 @@ open class TextField: UITextField {
 	
 	/// The placeholder UILabel.
 	@IBInspectable
-    open private(set) var placeholderLabel: UILabel!
+    open let placeholderLabel = UILabel()
 	
 	/// Placeholder normal textColor.
 	@IBInspectable
@@ -564,8 +564,8 @@ open class TextField: UITextField {
 	
 	/// Prepares the placeholderLabel.
 	private func preparePlaceholderLabel() {
-        placeholderLabel = UILabel()
 		placeholderNormalColor = Color.darkText.others
+        placeholderLabel.backgroundColor = .clear
         addSubview(placeholderLabel)
 	}
 	
