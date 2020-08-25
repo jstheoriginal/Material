@@ -39,51 +39,6 @@ public struct Application {
     return shared?.takeUnretainedValue() as! UIApplication
   }
   
-  /// An optional reference to the main UIWindow.
-  public static var keyWindow: UIWindow? {
-    return Application.shared.keyWindow
-  }
-  
-  /// An optional reference to the top most view controller.
-  public static var rootViewController: UIViewController? {
-    return keyWindow?.rootViewController
-  }
-  
-  /// A boolean indicating if the device is in Landscape mode.
-  public static var isLandscape: Bool {
-    return Application.shared.statusBarOrientation.isLandscape
-  }
-  
-  /// A boolean indicating if the device is in Portrait mode.
-  public static var isPortrait: Bool {
-    return !isLandscape
-  }
-  
-  /// The current UIInterfaceOrientation value.
-  public static var orientation: UIInterfaceOrientation {
-    return Application.shared.statusBarOrientation
-  }
-  
-  /// Retrieves the device status bar style.
-  public static var statusBarStyle: UIStatusBarStyle {
-    get {
-      return Application.shared.statusBarStyle
-    }
-    set(value) {
-      Application.shared.statusBarStyle = value
-    }
-  }
-  
-  /// Retrieves the device status bar hidden state.
-  public static var isStatusBarHidden: Bool {
-    get {
-      return Application.shared.isStatusBarHidden
-    }
-    set(value) {
-      Application.shared.isStatusBarHidden = value
-    }
-  }
-  
   /// A reference to the user interface layout direction.
   public static var userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection {
     return Application.shared.userInterfaceLayoutDirection
