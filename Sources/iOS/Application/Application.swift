@@ -84,14 +84,6 @@ public struct Application {
     }
   }
   
-  /**
-   A boolean that indicates based on iPhone rules if the
-   status bar should be shown.
-   */
-  public static var shouldStatusBarBeHidden: Bool {
-    return isLandscape && .phone == Device.userInterfaceIdiom
-  }
-  
   /// A reference to the user interface layout direction.
   public static var userInterfaceLayoutDirection: UIUserInterfaceLayoutDirection {
     return Application.shared.userInterfaceLayoutDirection

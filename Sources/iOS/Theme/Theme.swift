@@ -99,76 +99,6 @@ public extension Theme {
   }()
 }
 
-public extension Theme {
-  /**
-   Applies theme to the entire app.
-   - Parameter theme: A Theme.
-   */
-  static func apply(theme: Theme) {
-    current = theme
-    guard let v = Application.rootViewController else {
-      return
-    }
-    
-    apply(theme: theme, to: v)
-  }
-  
-  /**
-   Applies theme to the hierarchy of given view.
-   - Parameter theme: A Theme.
-   - Parameter to view: A UIView.
-   */
-  static func apply(theme: Theme, to view: UIView) {
-    guard !((view as? Themeable)?.isThemingEnabled == false), !view.isProcessed else {
-      return
-    }
-    
-    view.subviews.forEach {
-      apply(theme: theme, to: $0)
-    }
-    
-    (view as? Themeable)?.apply(theme: theme)
-  }
-  
-  /**
-   Applies theme to the hierarchy of given view controller.
-   - Parameter theme: A Theme.
-   - Parameter to viewController: A UIViewController.
-   */
-  static func apply(theme: Theme, to viewController: UIViewController) {
-    guard !((viewController as? Themeable)?.isThemingEnabled == false) else {
-      return
-    }
-    
-    viewController.allChildren.forEach {
-      apply(theme: theme, to: $0)
-      $0.view.isProcessed = true
-    }
-    
-    apply(theme: theme, to: viewController.view)
-    
-    viewController.allChildren.forEach {
-      $0.view.isProcessed = false
-    }
-    
-    (viewController as? Themeable)?.apply(theme: theme)
-  }
-  
-  /**
-   Applies provided theme for the components created within the given block
-   without chaging app's theme.
-   - Parameter theme: A Theme.
-   - Parameter for block: A code block.
-   */
-  static func applying(theme: Theme, for execute: () -> Void) {
-    let v = current
-    current = theme
-    execute()
-    current = v
-  }
-}
-
-
 /// A memory reference to the isThemingEnabled for Themeable NSObject subclasses.
 private var IsThemingEnabledKey: UInt8 = 0
 
@@ -204,23 +134,6 @@ public extension Themeable where Self: NSObject {
     }
     
     apply(theme: .current)
-  }
-}
-
-private extension UIViewController {
-  /// Returns all possible child view controllers.
-  var allChildren: [UIViewController] {
-    var all = children
-    
-    if let v = self as? TabsController {
-      all += v.viewControllers
-    }
-    
-    if let v = presentedViewController, v.presentingViewController === self {
-      all.append(v)
-    }
-    
-    return all
   }
 }
 
